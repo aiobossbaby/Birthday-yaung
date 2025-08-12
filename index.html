@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="my">
+<head>
+  <meta charset="UTF-8" />
+  <title>ဆရာ ဒဂုန်ရောင် မွေးနေ့ဂုဏ်ပြု & ဆုတောင်း</title>
+  <style>
+    body {
+      background: black;
+      color: gold;
+      font-family: 'Noto Sans Myanmar', sans-serif;
+      padding: 2rem;
+    }
+    input, textarea {
+      width: 100%;
+      margin-bottom: 1rem;
+      padding: 0.5rem;
+      border-radius: 6px;
+      border: 1px solid #ab47bc;
+      background: rgba(255,255,255,0.06);
+      color: #FFD700;
+    }
+    button {
+      padding: 0.7rem;
+      width: 100%;
+      background: #FFD700;
+      border: none;
+      border-radius: 10px;
+      font-weight: 700;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <h1>ဆုတောင်းပေးရန်</h1>
+
+  <label for="name">နာမည် (optional)</label>
+  <input id="name" type="text" placeholder="နာမည်ထည့်ပါ - မထည့်လည်းရသည်" />
+
+  <label for="wish">ဆုတောင်းစာ</label>
+  <textarea id="wish" rows="5" placeholder="သင့်ဆုတောင်းကို ဒီမှာရေးပါ..."></textarea>
+
+  <button id="sendBtn">ပို့ရန်</button>
+
+  <p id="msg" style="margin-top: 1rem; font-weight: 700;"></p>
+
+  <script>
+    const SHEET_API = "https://sheetdb.io/api/v1/your_sheetdb_id"; // <-- ဒီမှာ မိမိ SheetDB API URL ထည့်ပါ
+
+    const nameInput = document.getElementById('name');
+    const wishInput = document.getElementById('wish');
+    const sendBtn = document.getElementById('sendBtn');
+    const msgP = document.getElementById('msg');
+
+    sendBtn.onclick = async () => {
+      const name = nameInput.value.trim() || 'Anonymous';
+      const wish = wishInput.value.trim();
+      if (!wish) {
+        alert('ဆုတောင်းကို ရိုက်ထည့်ပေးပါ');
+        return;
+      }
+
+      const data = {
+        data: [{ Name: name, Wish: wish, Date: new Date().toLocaleString() }]
+      };
+
+      try {
+        const res = await fetch(SHEET_API, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(data)
+        });
+        if (res.ok) {
+          msgP.textContent = 'သင့်ဆုတောင်းကို ကျေးဇူးပြု၍ လက်ခံရရှိပါသည်။';
+          nameInput.value = '';
+          wishInput.value = '';
+          setTimeout(() => { msgP.textContent = ''; }, 4000);
+        } else {
+          alert('ဆာဗာမှ အမှားတက်နေသည်။');
+        }
+      } catch (err) {
+        alert('ပို့ရာတွင် ပြသာနာရှိသည်။');
+        console.error(err);
+      }
+    };
+  </script>
+</body>
+</html>
