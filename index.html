@@ -1,24 +1,124 @@
-    margin-top: 2rem;
-  }
-  .contact-links .btn {
-    display: inline-block;
-    background: #FFD700;
-    color: #000;
-    font-weight: 700;
-    padding: 0.6rem 1.2rem;
-    margin: 0.5rem;
-    border-radius: 10px;
-    text-decoration: none;
-    box-shadow: 0 4px 10px rgba(255,215,0,0.4);
-    transition: background-color 0.2s ease;
-    font-family: 'Noto Sans Myanmar', serif;
-  }
-  .contact-links .btn:hover {
-    background-color: #ccac00;
-  }
+<!DOCTYPE html>
+<html lang="my">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>ဆရာ ဒဂုန်ရောင် မွေးနေ့ဂုဏ်ပြု & ဆုတောင်း</title>
+<style>
+  body {
+    font-family: 'Noto Sans Myanmar', serif;
+    margin: 2rem;
+    background: #000;
+    color: #FFD700;
+    line-height: 1.6;
+  }
+  h1 {
+    font-size: 2.4rem;
+    text-align: center;
+    margin-bottom: 0.25rem;
+  }
+  h2 {
+    font-size: 1.6rem;
+    text-align: center;
+    margin-bottom: 1.5rem;
+  }
+  strong {
+    font-weight: 900;
+  }
+  section.portrait {
+    text-align: center;
+    margin: 2rem 0;
+  }
+  section.portrait img {
+    width: 280px;
+    height: 280px;
+    border-radius: 20px;
+    border: 3px solid #FFD700;
+    box-shadow: 0 0 15px #FFD700;
+  }
+  .marquee-container {
+    overflow: hidden;
+    background: linear-gradient(90deg, #b39ddb, #7b1fa2, #b39ddb);
+    border-radius: 10px;
+    margin: 2rem 0;
+    padding: 0.4rem 0;
+    box-shadow: 0 4px 8px rgba(123,31,162,0.25);
+    border: 1px solid rgba(255,255,255,0.06);
+  }
+  .marquee-text {
+    display: inline-block;
+    white-space: nowrap;
+    padding-left: 100%;
+    animation: marqueeMove 18s linear infinite;
+    font-weight: 900;
+    font-size: 1.25rem;
+    color: #fff;
+    background: linear-gradient(90deg, #fff7d1 0%, #ffda44 25%, #ffae00 50%, #ffd700 75%, #fff7d1 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow:
+      0 0 8px rgba(255,215,0,0.85),
+      0 0 18px rgba(255,200,0,0.6),
+      0 0 28px rgba(255,180,0,0.45);
+  }
+  @keyframes marqueeMove {
+    0%   { transform: translateX(0%); }
+    100% { transform: translateX(-100%); }
+  }
+  section.wish-panel {
+    margin-top: 2rem;
+  }
+  section.wish-panel label {
+    display: block;
+    margin-top: 1rem;
+    font-weight: 700;
+  }
+  section.wish-panel input[type="text"],
+  section.wish-panel textarea {
+    width: 100%;
+    padding: 0.6rem;
+    border-radius: 10px;
+    border: 2px solid #ab47bc;
+    background: rgba(255,255,255,0.06);
+    color: #FFD700;
+    font-family: 'Noto Sans Myanmar', serif;
+    font-size: 1rem;
+    resize: vertical;
+    box-shadow: inset 0 0 5px rgba(171,71,188,0.06);
+  }
+  section.wish-panel input[type="text"] {
+    height: 40px;
+  }
+  section.wish-panel textarea {
+    height: 100px;
+  }
+  section.wish-panel button {
+    margin-top: 1rem;
+    background-color: #FFD700;
+    color: #000;
+    font-weight: 700;
+    border: none;
+    padding: 0.6rem 1.2rem;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 1rem;
+    box-shadow: 0 4px 10px rgba(255,215,0,0.4);
+    transition: background-color 0.2s ease;
+  }
+  section.wish-panel button:hover {
+    background-color: #ccac00;
+  }
+  .thankyou-msg {
+    margin-top: 1rem;
+    font-weight: 700;
+    text-align: center;
+    display: none;
+  }
 </style>
 </head>
 <body>
+
 
 <h1>ဆရာ ဒဂုန်ရောင် မွေးနေ့ဂုဏ်ပြု</h1>
 <h2>၁၃-၈-၂၀၂၅ ကမ်ဘာမြေပေါ် ရောက်ရှိခြင်း နှစ်ပတ်လည် အထိမ်းအမှတ်</h2>
