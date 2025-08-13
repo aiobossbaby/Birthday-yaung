@@ -1,87 +1,204 @@
 <!DOCTYPE html>
 <html lang="my">
 <head>
-  <meta charset="UTF-8" />
-  <title>ဆရာ ဒဂုန်ရောင် မွေးနေ့ဂုဏ်ပြု & ဆုတောင်း</title>
-  <style>
-    body {
-      background: black;
-      color: gold;
-      font-family: 'Noto Sans Myanmar', sans-serif;
-      padding: 2rem;
-    }
-    input, textarea {
-      width: 100%;
-      margin-bottom: 1rem;
-      padding: 0.5rem;
-      border-radius: 6px;
-      border: 1px solid #ab47bc;
-      background: rgba(255,255,255,0.06);
-      color: #FFD700;
-    }
-    button {
-      padding: 0.7rem;
-      width: 100%;
-      background: #FFD700;
-      border: none;
-      border-radius: 10px;
-      font-weight: 700;
-      cursor: pointer;
-    }
-  </style>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>ဆရာ ဒဂုန်ရောင် မွေးနေ့ဂုဏ်ပြု & ဆုတောင်း</title>
+<style>
+  body {
+    font-family: 'Noto Sans Myanmar', serif;
+    margin: 2rem;
+    background: #000;
+    color: #FFD700;
+    line-height: 1.6;
+  }
+  h1 {
+    font-size: 2.4rem;
+    text-align: center;
+    margin-bottom: 0.25rem;
+  }
+  h2 {
+    font-size: 1.6rem;
+    text-align: center;
+    margin-bottom: 1.5rem;
+  }
+  strong {
+    font-weight: 900;
+  }
+  section.portrait {
+    text-align: center;
+    margin: 2rem 0;
+  }
+  section.portrait img {
+    width: 280px;
+    height: 280px;
+    border-radius: 20px;
+    border: 3px solid #FFD700;
+    box-shadow: 0 0 15px #FFD700;
+  }
+  .marquee-container {
+    overflow: hidden;
+    background: linear-gradient(90deg, #b39ddb, #7b1fa2, #b39ddb);
+    border-radius: 10px;
+    margin: 2rem 0;
+    padding: 0.4rem 0;
+    box-shadow: 0 4px 8px rgba(123,31,162,0.25);
+    border: 1px solid rgba(255,255,255,0.06);
+  }
+  .marquee-text {
+    display: inline-block;
+    white-space: nowrap;
+    padding-left: 100%;
+    animation: marqueeMove 18s linear infinite;
+    font-weight: 900;
+    font-size: 1.25rem;
+    color: #fff;
+    background: linear-gradient(90deg, #fff7d1 0%, #ffda44 25%, #ffae00 50%, #ffd700 75%, #fff7d1 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow:
+      0 0 8px rgba(255,215,0,0.85),
+      0 0 18px rgba(255,200,0,0.6),
+      0 0 28px rgba(255,180,0,0.45);
+  }
+  @keyframes marqueeMove {
+    0%   { transform: translateX(0%); }
+    100% { transform: translateX(-100%); }
+  }
+  section.wish-panel {
+    margin-top: 2rem;
+  }
+  section.wish-panel label {
+    display: block;
+    margin-top: 1rem;
+    font-weight: 700;
+  }
+  section.wish-panel input[type="text"],
+  section.wish-panel textarea {
+    width: 100%;
+    padding: 0.6rem;
+    border-radius: 10px;
+    border: 2px solid #ab47bc;
+    background: rgba(255,255,255,0.06);
+    color: #FFD700;
+    font-family: 'Noto Sans Myanmar', serif;
+    font-size: 1rem;
+    resize: vertical;
+    box-shadow: inset 0 0 5px rgba(171,71,188,0.06);
+  }
+  section.wish-panel input[type="text"] {
+    height: 40px;
+  }
+  section.wish-panel textarea {
+    height: 100px;
+  }
+  section.wish-panel button {
+    margin-top: 1rem;
+    background-color: #FFD700;
+    color: #000;
+    font-weight: 700;
+    border: none;
+    padding: 0.6rem 1.2rem;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 1rem;
+    box-shadow: 0 4px 10px rgba(255,215,0,0.4);
+    transition: background-color 0.2s ease;
+  }
+  section.wish-panel button:hover {
+    background-color: #ccac00;
+  }
+  .thankyou-msg {
+    margin-top: 1rem;
+    font-weight: 700;
+    text-align: center;
+    display: none;
+  }
+</style>
 </head>
 <body>
-  <h1>ဆုတောင်းပေးရန်</h1>
 
+<h1>ဆရာ ဒဂုန်ရောင် မွေးနေ့ဂုဏ်ပြု</h1>
+<h2>၁၃-၈-၂၀၂၅ ကမ္ဘာမြေပေါ် ရောက်ရှိခြင်း နှစ်ပတ်လည် အထိမ်းအမှတ်</h2>
+
+<p>ဆရာဒဂုန်ရောင် ...... အခုဆိုရင် ရှင်သန်ရခြင်းရဲ့အဓိပ္ပါယ်ကို ပိုနက်ရှိုင်းစွာ ရှာဖွေရင်း ရယ်မောပျော်ရွှင်စွာ ဘဝကိုဖြတ်သန်းနိုင်နေပါပြီ။</p>
+
+<p>ဘဝမှာ ကြုံခဲ့သမျှ ဒုက္ခဟူသမျှ၊ ဟာသလုပ်၊ ပြောင်သရော်ကာ ကိုယ်တိုင် အရက်နဲ့မြည်း၊ ဒုက္ခကောင်ကို အရွဲ့ ​ပြန်တိုက်ပြီး</p>
+
+<p>လောကဒဏ်မုန်တိုင်း အလီလီကို အကြိမ်ကြိမ်ကျော်လွန်ပြီးတဲ့ မိသားစုရဲ့ မာလိန်မှုူး <strong>"ဒဂုန်ရောင်"</strong> မွေးနေ့မှစ အရက်တွေ ငွေလိုပေါပါစေ။ ငွေတွေရေ​လိုပေါပါစေ။ တ၍မလိုသောလူ ဖြစ်နိုင်ပါစေကြောင်း မွေးနေ့ဆုမွန်ကောင်း တောင်းပေးလိုက်ပါသည်။</p>
+
+<section class="portrait" aria-hidden="true">
+  <!-- သင့်ဓာတ်ပုံ URL ထည့်ပါ -->
+  <img src="https://i.ibb.co/TDD8F4NM/IMG-20250813-052236-437.jpg" alt="​ဆျာဂျီးမျိုးနွယ်" />
+</section>
+
+<div class="marquee-container" aria-label="ဆုတောင်း စာလုံးပြေး">
+  <div class="marquee" role="marquee" aria-live="off">
+<div class="marquee-text" id="marqueeText">
+      ဆုတောင်းများကို စိတ်အားထက်သန်စွာ ပေးပို့ကြသောမိတ်ဆွေများ ~ &nbsp;&nbsp;
+      ကျေးဇူးအထူးတင်ပါသည် ~ &nbsp;&nbsp;
+      ဆရာ ဒဂုန်ရောင်နှင့် ~ &nbsp;&nbsp;
+      ဆုတောင်းများကို စိတ်အားထက်သန်စွာပေးပို့ကြသောမိတ်ဆွေများ ~
+    </div>
+  </div>
+</div>
+
+<section class="wish-panel" aria-label="ဆုမွန်တောင်းပေးရန်">
   <label for="name">နာမည် (optional)</label>
-  <input id="name" type="text" placeholder="နာမည်ထည့်ပါ - မထည့်လည်းရသည်" />
+  <input type="text" id="name" placeholder="နာမည်ထည့်ပါ - မထည့်လည်းရသည်" />
 
-  <label for="wish">ဆုတောင်းစာ</label>
-  <textarea id="wish" rows="5" placeholder="သင့်ဆုတောင်းကို ဒီမှာရေးပါ..."></textarea>
+  <label for="wish">နမည် နှင့်ဆုမွန်တောင်း စာသား</label>
+  <textarea id="wish" placeholder="သင့်ဆုမွန်တောင်းကို ဒီမှာရေးပါ..."></textarea>
 
-  <button id="sendBtn">ပို့ရန်</button>
+  <button id="submitBtn" aria-label="Send wish">ပို့ရန်</button>
 
-  <p id="msg" style="margin-top: 1rem; font-weight: 700;"></p>
+  <p class="thankyou-msg" id="thankyou">သင့်ဆုတောင်းကို ဆရာဒဂုန်ရောင်ထံအရောက်ပို့လိုက်ပါပြီ။</p>
+</section>
 
-  <script>
-    const SHEET_API = "https://sheetdb.io/api/v1/your_sheetdb_id"; // <-- ဒီမှာ မိမိ SheetDB API URL ထည့်ပါ
+<script>
+  const submitBtn = document.getElementById('submitBtn');
+  const wishTextarea = document.getElementById('wish');
+  const nameInput = document.getElementById('name');
+  const thankyouMsg = document.getElementById('thankyou');
 
-    const nameInput = document.getElementById('name');
-    const wishInput = document.getElementById('wish');
-    const sendBtn = document.getElementById('sendBtn');
-    const msgP = document.getElementById('msg');
+  submitBtn.addEventListener('click', () => {
+  const wish = wishTextarea.value.trim();
+  const name = nameInput.value.trim() || "Anonymous";
 
-    sendBtn.onclick = async () => {
-      const name = nameInput.value.trim() || 'Anonymous';
-      const wish = wishInput.value.trim();
-      if (!wish) {
-        alert('ဆုတောင်းကို ရိုက်ထည့်ပေးပါ');
-        return;
-      }
+  if (!wish) {
+    alert('ဆုတောင်းကို ရိုက်ထည့်ပေးပါ');
+    return;
+  }
 
-      const data = {
-        data: [{ Name: name, Wish: wish, Date: new Date().toLocaleString() }]
-      };
+  // SheetDB API ကို POST request ပို့ခြင်း
+  fetch('https://sheetdb.io/api/v1/jk2rx5qxh8h60', {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify([
+      {
+        name: name,
+        wish: wish,
+      },
+    ]),
+  })
+  .then(response => response.json())
+  .then(data => {
+    console.log('Success:', data);
+    // UI ပြောင်းလဲခြင်း
+    wishTextarea.value = '';
+    nameInput.value = '';
+    thankyouMsg.style.display = 'block';
+    setTimeout(() => {
+      thankyouMsg.style.display = 'none';
+    }, 4000);
+  })
+  .catch((error) => {
+    console.error('Error:', error);
+  });
+</script>
 
-      try {
-        const res = await fetch(SHEET_API, {
-          method: 'POST',
-          headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify(data)
-        });
-        if (res.ok) {
-          msgP.textContent = 'သင့်ဆုတောင်းကို ကျေးဇူးပြု၍ လက်ခံရရှိပါသည်။';
-          nameInput.value = '';
-          wishInput.value = '';
-          setTimeout(() => { msgP.textContent = ''; }, 4000);
-        } else {
-          alert('ဆာဗာမှ အမှားတက်နေသည်။');
-        }
-      } catch (err) {
-        alert('ပို့ရာတွင် ပြသာနာရှိသည်။');
-        console.error(err);
-      }
-    };
-  </script>
 </body>
-</html>
+  </html>
